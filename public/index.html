@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="chat">
+    <div id="messages"></div>
+    <br>
+    <input type="text" id="input" placeholder="Type a message...">
+    <button id="sendBtn">Send</button>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io()
+
+  const messagesDiv = document.getElementById('messages')
+  const inputElem = document.getElementById('input')
+  const sendBtn = document.getElementById('sendBtn')
+
+  socket.on('chat history', (messages) => {
+    messagesDiv.innerHTML = ''
+    messages.forEach(message => {
+      appendMessage(message)
+    })
+  })
+
+  socket.on('broadcast message', (message) => {
+    appendMessage(message)
+  })
+
+  sendBtn.addEventListener('click', () => {
+    const text = inputElem.value
+    if (text) {
+      socket.emit('new message', {text, role: 'user'}) // Role is hardcoded to 'user'
+      inputElem.value = ''
+    }
+  })
+
+  function appendMessage(message) {
+    const formattedTime = new Date(message.timestamp).toLocaleTimeString();
+    const messageElem = document.createElement('div');
+    messageElem.innerHTML = `<strong>${message.username}:</strong> ${message.text} <small class="timestamp">${formattedTime}</small>`;
+    messagesDiv.appendChild(messageElem);
+    scrollToBottom();
+  }
+
+  function scrollToBottom() {
+    messagesDiv.scrollTop = messagesDiv.scrollHeight
+  }
+</script>
+</body>
+</html>
