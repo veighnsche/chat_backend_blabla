@@ -1,0 +1,122 @@
+{
+  "library": {
+    "name": "Downtown Public Library",
+    "address": "123 Main St, Anytown, USA"
+  },
+  "books": [
+    {
+      "id": "001",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "isbn": "9780743273565",
+      "borrower": {
+        "name": "Alice Smith",
+        "dueDate": "2023-10-05"
+      }
+    },
+    {
+      "id": "002",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "isbn": "9780061120084",
+      "borrower": null
+    },
+    {
+      "id": "003",
+      "title": "1984",
+      "author": "George Orwell",
+      "isbn": "9780451524935",
+      "borrower": {
+        "name": "Bob Johnson",
+        "dueDate": "2023-09-28"
+      }
+    },
+    {
+      "id": "004",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "isbn": "9780316769174",
+      "borrower": null
+    },
+    {
+      "id": "005",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "isbn": "9780141439518",
+      "borrower": null
+    },
+    {
+      "id": "006",
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "isbn": "9780618640157",
+      "borrower": null
+    },
+    {
+      "id": "007",
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "isbn": "9780590353427",
+      "borrower": {
+        "name": "Emma Davis",
+        "dueDate": "2023-10-12"
+      }
+    },
+    {
+      "id": "008",
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "isbn": "9780547928227",
+      "borrower": null
+    },
+    {
+      "id": "009",
+      "title": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "isbn": "9780439023481",
+      "borrower": null
+    },
+    {
+      "id": "010",
+      "title": "The Da Vinci Code",
+      "author": "Dan Brown",
+      "isbn": "9780307474278",
+      "borrower": {
+        "name": "James Wilson",
+        "dueDate": "2023-09-30"
+      }
+    }
+  ],
+  "members": [
+    {
+      "id": "M001",
+      "name": "Alice Smith",
+      "email": "alice@email.com",
+      "phone": "555-1234"
+    },
+    {
+      "id": "M002",
+      "name": "Bob Johnson",
+      "email": "bob@email.com",
+      "phone": "555-5678"
+    },
+    {
+      "id": "M003",
+      "name": "Charlie Brown",
+      "email": "charlie@email.com",
+      "phone": "555-7890"
+    },
+    {
+      "id": "M004",
+      "name": "Diana Miller",
+      "email": "diana@email.com",
+      "phone": "555-2345"
+    },
+    {
+      "id": "M005",
+      "name": "Ella Davis",
+      "email": "ella@email.com",
+      "phone": "555-6789"
+    }
+  ]
+}
